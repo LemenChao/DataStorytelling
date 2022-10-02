@@ -1,0 +1,1101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/DataStoryOntology#"
+     xml:base="http://www.semanticweb.org/DataStoryOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/DataStoryOntology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/DataStoryOntology/1.0"/>
+        <rdfs:isDefinedBy xml:lang="en">Chaolemen Borjigin</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#beRecountedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#beRecountedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Audience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#consistsOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#consistsOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#contributesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#contributesTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Bias"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#converts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#converts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Converter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#createdBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#detectsFeaturesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#detectsFeaturesFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Prober"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#discribes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#discribes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#ExpectedResult"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#PredictedResult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#enhances -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#enhances">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Render"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#explains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#explains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#fetchesDataFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#fetchesDataFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#identifiesFeaturesFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#identifiesFeaturesFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Prober"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#inputs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#inputs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#insightsFeaturesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#insightsFeaturesOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Prober"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isAllyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isAllyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#AllyChar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isCharacterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isCharacterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Bias"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isExpectationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isExpectationOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#ExpectedResult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Audience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isFeauresOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isFeauresOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isLabelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isLabelOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isMainCharacterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isMainCharacterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#isCharacterOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isObjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isObjectOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isOpponentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isOpponentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#OpponentChar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isPositiveTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isPositiveTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#PositiveChar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#NegativeChar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isSubPlotOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isSubPlotOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isSubjectOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#isSubmittedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#isSubmittedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#narratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#narratedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Narrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#optimizeDataFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#optimizeDataFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#optimizesResultsOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#optimizesResultsOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Narrator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#outputs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#outputs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#recounts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#recounts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#StoryTeller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#recountsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#recountsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#StoryTeller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Audience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#reports -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#reports">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Reporter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#responses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#responses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#validates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#validates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Validator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#visualizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#visualizes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Visualizer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#abstract">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#keywords">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/DataStoryOntology#timestamp">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Audience"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Converter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#DataStory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Fetcher"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Interpreter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Narrator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Optimizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Predictor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Prober"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Render"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/DataStoryOntology#Validator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#AllyChar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#AllyChar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/DataStoryOntology#OpponentChar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Antagonist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Antagonist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/DataStoryOntology#Protagonist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Audience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Audience">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Author">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/DataStoryOntology#StoryDesigner"/>
+        <rdfs:comment>Creator</rdfs:comment>
+        <rdfs:isDefinedBy>CLM B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Bias -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Bias">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Character">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ClimaxPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ClimaxPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ConstantFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ConstantFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/DataStoryOntology#VariableFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Converter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Converter">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#CrystalReport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#CrystalReport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Reporter"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Dashboard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Dashboard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Visualizer"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#DataStory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#DataStory">
+        <rdfs:comment>DataStory</rdfs:comment>
+        <rdfs:isDefinedBy>CLM B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Event">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ExpectedResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ExpectedResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ExpositionPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ExpositionPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#FairnessTestEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#FairnessTestEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#FallingActionPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#FallingActionPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#FeatureMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Fetcher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Fetcher">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#FreytagPyramid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#HowPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#HowPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Hypercycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Hypercycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#IncitingIncidentPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#IncitingIncidentPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#InnovationTrigger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#InnovationTrigger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#InnovationTriggerPlor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#InnovationTriggerPlor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Interpreter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Interpreter">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#MainChar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#MainChar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Narrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Narrator">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#NegativeChar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#NegativeChar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/DataStoryOntology#PositiveChar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#NextStepsPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#NextStepsPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#SPSN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#OpponentChar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#OpponentChar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Optimizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Optimizer">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#PeakofInflated_xpectations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#PeakofInflated_xpectations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#PlateauofProductivityPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#PlateauofProductivityPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Plot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Plot">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#PositiveChar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#PositiveChar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#PredictedResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#PredictedResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#TargetValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Predictor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Predictor">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Prober -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Prober">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ProblemPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ProblemPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#SPSN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Protagonist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Protagonist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#RDFConverter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#RDFConverter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Converter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ReliabilityTestEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ReliabilityTestEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Render -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Render">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Reporter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Reporter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Narrator"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#ResolutionPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#ResolutionPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#RisingActionPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#RisingActionPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#SPSN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#SPSN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Situation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#SPSN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#SlopeoEnlightenment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#SlopeoEnlightenment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#SolutionPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#SolutionPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#SPSN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#SolvabilityTestEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#SolvabilityTestEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#StoryDesigner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#StoryDesigner">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#StoryTeller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#StoryTeller">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#TargetValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#TargetValue">
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#TroughofDisillusionment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#TroughofDisillusionment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Validator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Validator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#VariableFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#VariableFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#FeatureMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#Visualizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#Visualizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Narrator"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhatIfTestEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhatIfTestEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/DataStoryOntology#WhyNotTestEvent"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhatPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhatPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhenPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhenPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhoPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhoPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhyNotTestEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhyNotTestEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Event"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#WhyPlot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#WhyPlot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#5W1H -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/DataStoryOntology#5W1H">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/DataStoryOntology#Plot"/>
+        <rdfs:isDefinedBy>CLM. B.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#AutomaticDiagnosisSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/DataStoryOntology#AutomaticDiagnosisSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/DataStoryOntology#CreditCardDefaultPrediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/DataStoryOntology#CreditCardDefaultPrediction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#FreytagPyramid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#Hypercycle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#SPSN"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#5W1H"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#InnovationTrigger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#InnovationTriggerPlor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#PeakofInflated_xpectations"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#PlateauofProductivityPlot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#SlopeoEnlightenment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/DataStoryOntology#TroughofDisillusionment"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
